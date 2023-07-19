@@ -24,5 +24,8 @@ namespace EntityFrameworkExample
 			// Trusted_Connection = indicates that our windows account should be used
 			options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExample;Trusted_Connection=True;");
 		}
+
+		// Tell EF Core to track students in the database
+		public DbSet<Student> Students { get; set; }
 	}
 }
